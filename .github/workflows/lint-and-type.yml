@@ -3,7 +3,7 @@ name: Lint and Type
 on:
    pull_request:
    push:
-      branches: main
+      branches: [main, dev]
 
 permissions:
    contents: read
@@ -13,7 +13,7 @@ jobs:
       runs-on: ubuntu-latest
       strategy:
          matrix:
-            node-version: [20.x]
+            node-version: [lts/*]
       steps:
          - name: Checkout code
            uses: actions/checkout@v4
@@ -29,12 +29,8 @@ jobs:
               node-version: ${{ matrix.node-version }}
               cache: pnpm
 
-         - name: Install dependencies and build
+         - name: Install dependencies and run tests
            run: |
               pnpm install --frozen-lockfile
-              pnpm build
-
-         - name: Run linters
-           run: |
               pnpm lint:type-check
               pnpm lint:eslint

@@ -1,4 +1,4 @@
-import { baseConfig } from "@zayne-labs/prettier-config";
+import { configWithTailwind } from "@zayne-labs/prettier-config";
 
 /**
  * @import { Config } from "prettier"
@@ -6,7 +6,7 @@ import { baseConfig } from "@zayne-labs/prettier-config";
  */
 
 const config = {
-	...baseConfig,
+	...configWithTailwind,
 };
 
 export default config;
