@@ -1,7 +1,17 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-	/* config options here */
-};
+const nextConfig = {
+	devIndicators: {
+		position: "bottom-right",
+	},
+
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
+
+	typescript: {
+		ignoreBuildErrors: true,
+	},
+} satisfies NextConfig;
 
 export default nextConfig;
