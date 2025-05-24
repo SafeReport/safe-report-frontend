@@ -1,0 +1,44 @@
+{
+	"name": "root",
+	"type": "module",
+	"version": "0.0.0",
+	"packageManager": "pnpm@9.15.4",
+	"scripts": {
+		"build": "pnpm --filter \"./packages/*\" build",
+		"build:dev": "pnpm --filter \"./packages/*\" build:dev",
+		"build:test": "pnpm --filter \"./packages/*\" build:test",
+		"inspect:eslint-config": "pnpx @eslint/config-inspector@latest",
+		"lint:attw": "pnpm --filter \"./packages/*\" lint:attw",
+		"lint:eslint": "pnpm --filter \"./packages/*\" lint:eslint",
+		"lint:eslint:interactive": "pnpm --filter \"./packages/*\" lint:eslint:interactive",
+		"lint:eslint:root": "eslint . --max-warnings 0",
+		"lint:eslint:root:interactive": "pnpx eslint-interactive@latest . --max-warnings 0 --fix",
+		"lint:format": "pnpm --filter \"./packages/*\" lint:format",
+		"lint:format:root": "prettier --write .",
+		"lint:publint": "pnpm --filter \"./packages/*\" lint:publint",
+		"lint:size": "pnpm --filter \"./packages/*\" lint:size",
+		"lint:type-check": "pnpm --filter \"./packages/*\" lint:type-check",
+		"prepare": "husky",
+		"release": "pnpm --filter \"./packages/*\" release",
+		"release:test": "pnpx pkg-pr-new publish \"./packages/*\" --compact",
+		"test": "pnpm --filter \"./packages/*\" test",
+		"test:dev": "pnpm --filter \"./packages/*\" test:dev"
+	},
+	"devDependencies": {
+		"@arethetypeswrong/cli": "0.17.4",
+		"@changesets/cli": "2.29.2",
+		"@types/node": "22.14.1",
+		"@zayne-labs/eslint-config": "0.8.1",
+		"@zayne-labs/prettier-config": "^0.8.1",
+		"eslint": "9.24.0",
+		"husky": "9.1.7",
+		"lint-staged": "15.5.1",
+		"prettier": "3.5.3",
+		"typescript": "5.8.3"
+	},
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/",
+		"provenance": true
+	}
+}
