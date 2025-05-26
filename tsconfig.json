@@ -8,6 +8,13 @@
 		}
 	},
 
-	"include": ["**/*.ts", "**/*.tsx", "public/**/*.ts", ".next/types/**/*.ts", "next-env.d.ts"],
+	"include": [
+		"stub.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		"public/**/*.ts",
+		".next/types/**/*.ts",
+		"next-env.d.ts"
+	],
 	"exclude": ["node_modules/**", ".next"]
 }

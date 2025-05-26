@@ -1,0 +1,10 @@
+export { default as harassment } from "./harassment.svg";
+export { default as accident } from "./accident.svg";
+export { default as school } from "./school.svg";
+export { default as threats } from "./threats.svg";
+export { default as theft } from "./theft.svg";
+export { default as environment } from "./environment.svg";
+export { default as logo } from "./logo.svg";
+export { default as logoEnlarged } from "./logo-enlarged.svg";
+export { default as coffee } from "./coffee.svg";
+export { default as book } from "./book.svg";
