@@ -37,7 +37,7 @@ function AccordionFaqs() {
 					<Accordion.Item key={FAQ.question} value={FAQ.answer}>
 						<Accordion.Trigger
 							className="flex items-center justify-between border-b border-b-app-dark-2 pb-1.5"
-							withDefaultIcon={false}
+							withIcon={false}
 						>
 							<p className="text-left text-[12px] text-pretty text-app-gray">{FAQ.question}</p>
 
